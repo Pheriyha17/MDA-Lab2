@@ -1,44 +1,41 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void clicked(){
-  print("the button is clicked");
+void clicked() {
+  print("Button clicked");
 }
-// Widget are the components that make up the UI of an app 
+
 void main() {
-  //runapp is the starting point of every app and it tells your phone to start rendering the app
   runApp(
     MaterialApp(
-     home: Scaffold(
-      body: Container(
-           decoration: BoxDecoration(
-            gradient:LinearGradient(
-            colors:[Colors.pinkAccent,Colors.blueAccent],
-             begin:AlignmentGeometry.topCenter,
-              end: AlignmentGeometry.bottomCenter,
-             )
-           ),
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color.fromARGB(255, 233, 47, 30), Color.fromRGBO(255, 255, 255, 1), Colors.purple],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          ),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Center(
-                 child: Text(
-                  "Hello World",
-                   style: TextStyle(
-                    color:Color.fromARGB(255, 232, 255, 28),
-                     fontSize: 70,
-                    )
-                   )
+                const Text(
+                  "Image",
+                  style:TextStyle(fontSize: 75),
+                ),
+                TextButton(
+                  onPressed: clicked,
+                  child: const Text(
+                    "Press Me",
+                    style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 73, 39, 176)),
                   ),
-                  TextButton(onPressed: clicked, child: Text(
-                    "Click me!",
-                    style: TextStyle(color: Color.fromARGB(255, 0, 0, 16))),)
-               ]
-               ),
-             ),
-          )
-        )
-      )
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
   );
 }
