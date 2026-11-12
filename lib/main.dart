@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void clicked() {
@@ -5,30 +6,37 @@ void clicked() {
 }
 
 void main() {
+  // runApp is  the starting point of every app / it tells your phone to start rendering the app
   runApp(
     MaterialApp(
-      home: Scaffold(
+      home: Scaffold( // Scaffold helps to set layout of the app, or else flutter will will get confused
         body: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color.fromARGB(255, 233, 47, 30), Color.fromRGBO(255, 255, 255, 1), Colors.purple],
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
+              colors: [Colors.pink, Colors.white,Colors.purple],
+              begin: AlignmentGeometry.topCenter,
+              end: AlignmentGeometry.bottomCenter,
             ),
           ),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  "Image",
-                  style:TextStyle(fontSize: 75),
+                Center(
+                  child: Text(
+                    "#Pheriyha",
+                    style: TextStyle(
+                      fontSize: 60,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
                 TextButton(
                   onPressed: clicked,
-                  child: const Text(
-                    "Press Me",
-                    style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 73, 39, 176)),
+                  child: Text(
+                    "love live laugh",
+                    style: TextStyle(fontSize: 20, color: Colors.purple),
                   ),
                 ),
               ],
