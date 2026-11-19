@@ -16,10 +16,10 @@ class CustomText extends StatelessWidget {
     // Step 4: Return a widget from the build function, in this case we are returning a Text widget
     return Text(
      text,
-      style: TextStyle(
+      style:const TextStyle(
         fontSize: 60,
         fontStyle: FontStyle.italic, 
-        color: const Color.fromARGB(255, 0, 0, 0),
+        color:  Color.fromARGB(255, 0, 0, 0),
     )
     );
   }

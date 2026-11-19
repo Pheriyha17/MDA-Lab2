@@ -14,9 +14,9 @@ class CustomButton extends StatelessWidget {
         return TextButton(
             onPressed: 
                 () {}, // This is a callback function, it is a function that is passed as an argument to another function
-            child: Text(
+            child: const Text(
                 "Love Live Laugh!",
-                style: TextStyle(fontSize: 20, color: Colors.purple),
+                style:const TextStyle(fontSize: 20, color: Colors.purple),
             ),
         );
 
